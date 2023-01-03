@@ -13,6 +13,7 @@
 		6399AD1A2963F4D000E938B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6399AD182963F4D000E938B6 /* Main.storyboard */; };
 		6399AD1C2963F4D300E938B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6399AD1B2963F4D300E938B6 /* Assets.xcassets */; };
 		6399AD1F2963F4D300E938B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6399AD1D2963F4D300E938B6 /* LaunchScreen.storyboard */; };
+		9BA29D0181000A5BF3B46535 /* Pods_RxSwfitText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFA0E5AB020FDC124E4D738 /* Pods_RxSwfitText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		6399AD1B2963F4D300E938B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6399AD1E2963F4D300E938B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6399AD202963F4D300E938B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C63FED4F38BCE8FCF98D2070 /* Pods-RxSwfitText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwfitText.release.xcconfig"; path = "Target Support Files/Pods-RxSwfitText/Pods-RxSwfitText.release.xcconfig"; sourceTree = "<group>"; };
+		CDFA0E5AB020FDC124E4D738 /* Pods_RxSwfitText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwfitText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF3869318036296A1B4934A5 /* Pods-RxSwfitText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwfitText.debug.xcconfig"; path = "Target Support Files/Pods-RxSwfitText/Pods-RxSwfitText.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA29D0181000A5BF3B46535 /* Pods_RxSwfitText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				6399AD112963F4D000E938B6 /* RxSwfitText */,
 				6399AD102963F4D000E938B6 /* Products */,
+				C1E56372C544140C1CF52726 /* Pods */,
+				F30E5E8029D1B34838884761 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = RxSwfitText;
 			sourceTree = "<group>";
 		};
+		C1E56372C544140C1CF52726 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF3869318036296A1B4934A5 /* Pods-RxSwfitText.debug.xcconfig */,
+				C63FED4F38BCE8FCF98D2070 /* Pods-RxSwfitText.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F30E5E8029D1B34838884761 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDFA0E5AB020FDC124E4D738 /* Pods_RxSwfitText.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6399AD232963F4D300E938B6 /* Build configuration list for PBXNativeTarget "RxSwfitText" */;
 			buildPhases = (
+				DBF26170B3888BEDFAF39791 /* [CP] Check Pods Manifest.lock */,
 				6399AD0B2963F4D000E938B6 /* Sources */,
 				6399AD0C2963F4D000E938B6 /* Frameworks */,
 				6399AD0D2963F4D000E938B6 /* Resources */,
+				1599124C1EB83E62FBA9047E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1599124C1EB83E62FBA9047E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxSwfitText/Pods-RxSwfitText-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxSwfitText/Pods-RxSwfitText-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxSwfitText/Pods-RxSwfitText-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBF26170B3888BEDFAF39791 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxSwfitText-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6399AD0B2963F4D000E938B6 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		6399AD242963F4D300E938B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF3869318036296A1B4934A5 /* Pods-RxSwfitText.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +379,7 @@
 		};
 		6399AD252963F4D300E938B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C63FED4F38BCE8FCF98D2070 /* Pods-RxSwfitText.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
