@@ -15,21 +15,26 @@ let disposeBag = DisposeBag()
 취침모드😴.onNext("🔊")
 취침모드😴.onNext("🔊")
 
-//취침모드😴.onCompleted()
+//취침모드😴.onCompleted()   14 15 16은 안나타낸다.. 18번만 구독된다.
 
 print("--------elementAt--------")
 let 두번울면깨는사람 = PublishSubject<String>()
 
 두번울면깨는사람
-    .element(at: 2)
-    .subscribe(onNext: { _ in
-        print("누구세요")
+    .element(at: 2) // 33~36 번호 인덱스 번호를 출력
+//    .subscribe(onNext: { _ in
+//        print("누구세요")
+//    })
+    .subscribe(onNext: {
+        print($0)
     })
     .disposed(by: disposeBag)
 
 두번울면깨는사람.onNext("🔊")
 두번울면깨는사람.onNext("🔊")
+두번울면깨는사람.onNext("👍")
 두번울면깨는사람.onNext("🔊")
+
 
 print("--------filter--------")
 Observable.of(1, 2, 3, 4, 5, 6, 7, 8)
@@ -41,7 +46,7 @@ Observable.of(1, 2, 3, 4, 5, 6, 7, 8)
 
 print("--------skip--------")
 Observable.of("😀", "😃", "😄", "🤓", "😎", "🐶")
-    .skip(5)
+    .skip(5) // 5개를 스킵하고 남은걸 프린트
     .subscribe(onNext: {
         print($0)
     })
