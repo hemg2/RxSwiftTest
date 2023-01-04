@@ -50,8 +50,8 @@
 		6399AD062963F4D000E938B6 = {
 			isa = PBXGroup;
 			children = (
-				6399AD2A2964194700E938B6 /* SubjectPractice.playground */,
 				6399AD262963F69A00E938B6 /* Observable.playground */,
+				6399AD2A2964194700E938B6 /* SubjectPractice.playground */,
 				6399AD2729640E4000E938B6 /* Traits.playground */,
 				6399AD282964110700E938B6 /* FilteringOperatorPractice.playground */,
 				6399AD292964114100E938B6 /* TransformingOperatorPractice.playground */,

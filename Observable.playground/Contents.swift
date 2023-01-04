@@ -7,6 +7,16 @@ Observable<Int>.just(1)  // 정의만 한다 그렇기에 서브스크립이 필
         print($0)
     })
 
+/*
+ Observable(옵저버블)의 생명주기
+1.Create  크리에이트된다.
+2.subscribe 서브스크라입 된다.
+3.onNext 넥스트로 데이터가 전달된다. 넥트스로 전달될수도있고 에러가 날수도있다. 에러가나면 에러에서 끝난다.
+4. onCompleted 컴플릿되고 끝이 난다.
+5. Disposed 디스포즈 된다. (끝부분)
+ 
+ */
+
 print("------Of1-------")
 Observable<Int>.of(1, 2, 3, 4, 5)
     .subscribe(onNext: {
