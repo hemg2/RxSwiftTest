@@ -34,45 +34,6 @@ import RxSwift
  */
 
 
-
-
-print("------subscribe1-------")
-Observable.of(1, 2, 3)
-    .subscribe {
-        print($0)
-    }
-
-
-print("------subscribe2-------")
-Observable.of(1, 2, 3)
-    .subscribe {
-        if let element = $0.element {
-            print(element)
-        }
-    }
-
-
-print("------subscribe3-------")
-Observable.of(1, 2, 3)
-    .subscribe(onNext: {
-        print($0)
-    })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //print("------Of1-------") // 오브는 다양한 형태의 이벤트가 가능하다 하나 이상을 가능하게함
 //Observable<Int>.of(1, 2, 3, 4, 5)
 //    .subscribe(onNext: {
