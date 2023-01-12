@@ -34,11 +34,11 @@ import RxSwift
  */
 
 
-//print("------Of1-------") // 오브는 다양한 형태의 이벤트가 가능하다 하나 이상을 가능하게함
-//Observable<Int>.of(1, 2, 3, 4, 5)
-//    .subscribe(onNext: {
-//        print($0)
-//    })
+print("------Of1-------") // 오브는 다양한 형태의 이벤트가 가능하다 하나 이상을 가능하게함
+Observable<Int>.of(1, 2, 3, 4, 5)
+    .subscribe(onNext: {
+        print($0)
+    })
 //
 //
 //
@@ -95,31 +95,31 @@ import RxSwift
 //        print("com")
 //    })
 //
-//
-//print("--------range--------")
-//Observable.range(start: 1, count: 9)
+
+//print("--------range--------") // 구구단 2단이 나타난다 포문과 비슷하다
+//Observable.range(start: 1, count: 9) // 스타트는 1부터 하여 9까지 카운트를 진행한다.
 //    .subscribe(onNext: {
 //        print("2*\($0)=\(2*$0)")
 //    })
-//
-//
-//print("--------dispose--------")
-//Observable.of(1, 2, 3)
-//    .subscribe(onNext: {
-//        print($0)
-//    })
-//    .dispose()
-//
-//
-//print("-------disposeBag--------")
-//let disposeBag = DisposeBag()
-//
-//Observable.of(1, 2, 3)
-//    .subscribe {
-//        print($0)
-//    }
-//    .disposed(by: disposeBag)
-//
+
+
+print("--------dispose--------")
+Observable.of(1, 2, 3)
+    .subscribe(onNext: {
+        print($0)
+    })
+    .dispose()
+
+
+print("-------disposeBag--------")
+let disposeBag = DisposeBag()
+
+Observable.of(1, 2, 3)
+    .subscribe {
+        print($0)
+    }
+    .disposed(by: disposeBag)
+
 //
 //print("--------create1--------")
 //Observable.create { observer -> Disposable in
