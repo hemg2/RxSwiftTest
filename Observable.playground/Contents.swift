@@ -31,7 +31,14 @@ import RxSwift
  Observable 들은 일정기간 동안 계속해서 이벤트를 생성(emit)
  marble diagram: 시간의 흐름에 따라서 값을 표시하는 방식
  
+ 
+ 추가적으로
+ dispose - 구독 취소
+옵저버블를 정의(생성)를 하고  서브스크립트로 구독하면 디스포즈 시켜서 메모리 누수되는걸 작동시켜야한다.
+이의 순서가 생명 주기이다.
+ disposed(by: disposeBag) 디스포즈를 해야한다. 생명주기다. 메모리가 누수될수있기때문에
  */
+
 
 
 //print("------Of1-------") // 오브는 다양한 형태의 이벤트가 가능하다 하나 이상을 가능하게함
@@ -102,25 +109,25 @@ import RxSwift
 //        print("2*\($0)=\(2*$0)")
 //    })
 
-
-print("--------dispose--------")
-Observable.of(1, 2, 3)
-    .subscribe(onNext: {
-        print($0)
-    })
-    .dispose() // 구독취소
+//
+//print("--------dispose--------")
+//Observable.of(1, 2, 3)
+//    .subscribe(onNext: {
+//        print($0)
+//    })
+//    .dispose() // 구독취소
 // 옵저버블를 정의(생성)를 하고  서브스크립트로 구독하면 디스포즈 시켜서 메모리 누수되는걸 작동시켜야한다.
 // 이의 순서가 생명 주기이다.
 
 
-print("-------disposeBag--------")
-let disposeBag = DisposeBag()
-
-Observable.of(1, 2, 3)
-    .subscribe {
-        print($0)
-    }
-    .disposed(by: disposeBag) //디스포즈를 해야한다. 생명주기다. 메모리가 누수될수있기때문에
+//print("-------disposeBag--------")
+//let disposeBag = DisposeBag()
+//
+//Observable.of(1, 2, 3)
+//    .subscribe {
+//        print($0)
+//    }
+//    .disposed(by: disposeBag) //디스포즈를 해야한다. 생명주기다. 메모리가 누수될수있기때문에
 
 
 //print("--------create1--------")
